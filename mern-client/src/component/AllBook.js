@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./AllBook.css";
+import { Link } from "react-router-dom";
 
 const AllBook = () => {
   const [bookData, setBookData] = useState([]);
@@ -30,6 +31,11 @@ const AllBook = () => {
   return (
     <div>
       <h1>AllBook</h1>
+      <div className="add-book-link">
+        <Link className="link-btn" to={"/"}>
+          Add Book
+        </Link>
+      </div>
       <table className="book-table">
         <thead>
           <tr>

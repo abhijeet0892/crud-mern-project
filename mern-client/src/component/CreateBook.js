@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./CreateBook.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const CreateBook = () => {
+  const navigate = useNavigate();
+
   const [bookData, setBookData] = useState({
     book_name: "",
     book_author: "",
@@ -31,6 +34,7 @@ const CreateBook = () => {
         book_author: "",
         book_price: "",
       });
+      navigate("/books");
     } catch (error) {
       console.error(error);
     }
@@ -75,6 +79,9 @@ const CreateBook = () => {
 
           <div className="form-group">
             <button type="submit">Add Book</button>
+            <Link className="view-all-books" to="/books">
+              View All Book
+            </Link>
           </div>
         </fieldset>
       </form>

@@ -61,3 +61,24 @@ h1 {
 .book-table button:hover {
   background-color: #c9302c;
 }
+
+.add-book-link {
+  margin-left: 160px;
+  width: 5%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-book-link:hover {
+  background-color: #0056b3;
+}
+.link-btn {
+  text-decoration: none;
+  color: white;
+}
